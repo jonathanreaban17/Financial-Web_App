@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
+//This style was mostly borrowed from https://github.com/gabrielwr/React-Retirement-Calculator
+
 /* Colors */
 export const BUTTON_BORDER_BLUE = "rgb(10,200,10)";
 //"#4A90E2";
-export const GRAPH_AREA_PURPLE = "rgb(2, 200, 2)";
-export const LINE_DEEP_PURPLE = "rgb(1, 1, 1)";
+export const GRAPH_AREA_GREEN = "rgb(2, 200, 2)";
+export const LINE_DEEP_GREEN = "rgb(1, 1, 1)";
 
 /* Font Family */
 export const FONT_FAMILY_LIGHT =

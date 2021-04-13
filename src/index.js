@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import store from "./store/";
 
 import App from "./elements/App";
-import CalculatorContainer from "./containers/calculator-container";
+import CalculatorContainer from "./containers/calculator-container/calc_container";
 import NotFound from "./elements/NotFound";
 
 import "./index.css";

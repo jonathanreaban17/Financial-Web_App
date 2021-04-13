@@ -1,5 +1,7 @@
 import React from "react";
 
+//This component was borrowed from https://github.com/gabrielwr/React-Retirement-Calculator
+
 const CustomizedXAxisTick = ({ x, y, payload, startingAge, retireAge }) => {
   let xAxisMarker = null;
 

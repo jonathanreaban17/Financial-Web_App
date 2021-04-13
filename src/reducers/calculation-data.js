@@ -6,6 +6,9 @@ import { assoc } from "ramda";
   The `calculation-data` reducer describes user-specified data needed for graph calculation
 
 */
+
+//https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
+//https://read.reduxbook.com/markdown/part1/03-updating-state.html
 export const actionTypes = {
   SET_FINAL_SAVINGS: "CALCULATION_DATA_SET_FINAL_SAVINGS",
   SET_GRAPH_DATA: "CALCULATION_DATA_SET_GRAPH_DATA",
@@ -15,7 +18,7 @@ export const actionTypes = {
   SET_RETIRE_AGE: "CALCULATION_DATA_SET_RETIRE_AGE",
   SET_RETIRE_AMT: "CALCULATION_DATA_SET_RETIRE_AMT",
   SET_RETIRE_SPENDING: "CALCULATION_DATA_SET_RETIRE_SPENDING",
-  SET_SALARY: "CALCULATION_DATA_SET_SALARY"
+  SET_CONTRIBUTION: "CALCULATION_DATA_SET_CONTRIBUTION"
 };
 
 export const actions = {
@@ -40,8 +43,8 @@ export const actions = {
   setRetireSpending(retireSpending) {
     return { type: actionTypes.SET_RETIRE_SPENDING, retireSpending };
   },
-  setSalary(salary) {
-    return { type: actionTypes.SET_SALARY, salary };
+  setContribution(contribution) {
+    return { type: actionTypes.SET_CONTRIBUTION, contribution };
   },
   setStartingAge(age) {
     return { type: actionTypes.SET_STARTING_AGE, age };
@@ -56,7 +59,7 @@ export const INITIAL_STATE = {
   retireAge: 65,
   retireAmt: 0,
   retireSpending: 100000,
-  salary: 6000,
+  contribution: 6000,
   startingAge: 22
 };
 
@@ -92,8 +95,8 @@ export default (_state = INITIAL_STATE, action) => {
       state = assoc("retireSpending", action.retireSpending)(state);
       break;
 
-    case actionTypes.SET_SALARY:
-      state = assoc("salary", action.salary)(state);
+    case actionTypes.SET_CONTRIBUTION:
+      state = assoc("contribution", action.contribution)(state);
       break;
 
     case actionTypes.SET_STARTING_AGE:
